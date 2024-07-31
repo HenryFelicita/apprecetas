@@ -20,12 +20,13 @@ export default function ListarReceta(props) {
             const querySnapshot = await getDocs(collection(db, 'recetas'))
             const docs = []
             querySnapshot.forEach((doc)=>{
-                const {nombre, descripcion, ingrediente} = doc.data()
+                const {nombre, descripcion, ingrediente, preparacion} = doc.data()
                 docs.push({
                     id:doc.id,
                     nombre,
                     descripcion,
                     ingrediente,
+                    preparacion,
                     
                 })
             })
@@ -48,7 +49,7 @@ export default function ListarReceta(props) {
         <Text style={styles.TextoBoton}>FAVORITOS</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.Boton} onPress={()=>props.navigation.navigate('Crear')}>
+      <TouchableOpacity style={styles.Boton} onPress={()=>props.navigation.navigate('Comprar Ingredientes')}>
         <Text style={styles.TextoBoton}>LISTA DE COMPRAS</Text>
       </TouchableOpacity>
       
@@ -93,7 +94,7 @@ export default function ListarReceta(props) {
     fontSize: 25,
   },  
   TextoNombre:{
-    fontSize:16
+    fontSize:18
   },
   BotonLista:{
     backgroundColor:'#DDDDDD',

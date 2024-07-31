@@ -15,6 +15,7 @@ import ListarReceta from './screens/ListarReceta';
 import ListarFavorito from './screens/ListarFavorito';
 import MostrarReceta from './screens/MostrarReceta';
 import MostrarFavorito from './screens/MostrarFavorito';
+import ListarIngrediente from './screens/ListarIngrediente';
 
 
 
@@ -36,6 +37,7 @@ export default function App() {
         <Stack.Screen name="Mostrar" component={MostrarReceta} />
         <Stack.Screen name="Favoritos" component={ListarFavorito} />
         <Stack.Screen name='Ver Favorito' component={MostrarFavorito} />
+        <Stack.Screen name='Comprar Ingredientes' component={ListarIngrediente} />
       </Stack.Navigator>
         
     );

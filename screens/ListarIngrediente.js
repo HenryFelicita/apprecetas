@@ -8,7 +8,7 @@ import {getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDo
 
 const db = getFirestore(appFirebase)
 //*************************************** BACK END ****************************************************/
-export default function ListarFavorito(props) {
+export default function ListarIngrediente(props) {
     //LOGICA PARA LISTAR
     const [lista, setLista] = useState([])
   
@@ -41,16 +41,13 @@ export default function ListarFavorito(props) {
       <ScrollView style={styles.scrollView}>
         
         <View>
-          <Text style ={styles.TextoTitulo}>LISTA DE RECETAS</Text>
+          <Text style ={styles.TextoTitulo}>LISTA DE INGREDIENTES</Text>
         </View>
         
         <View>
           {
             lista.map((list)=>(
-              <TouchableOpacity key={list.id} style={styles.BotonLista} 
-              onPress={()=>props.navigation.navigate('Ver Favorito',{favoritoId:list.id})}>
-                  <Text style={styles.TextoNombre}>-{list.nombre}</Text>
-              </TouchableOpacity>
+              <Text style={styles.TextoNombre}>{list.nombre}: {list.ingrediente}</Text>     
             ))
           }
         </View>
@@ -80,7 +77,8 @@ export default function ListarFavorito(props) {
       fontSize: 25,
     },  
     TextoNombre:{
-      fontSize:18
+      color: 'white',
+      fontSize: 18,
     },
     BotonLista:{
       backgroundColor:'#DDDDDD',

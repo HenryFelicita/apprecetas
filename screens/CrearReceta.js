@@ -16,7 +16,7 @@ export default function CrearReceta(props) {
     nombre:'', 
     descripcion:'',
     ingrediente:'',
-    preparacion:''
+    preparacion:'',
   }
 
   const [state, setState]= useState(initialState)
@@ -85,14 +85,20 @@ const styles = StyleSheet.create({
   },  
   container:{
     flex:1,
-    padding:35
+    padding:25
   },  
   inputgroup:{
     flex:1,
-    padding:10,
+    padding:5,
     marginBottom:20,
     borderBottomWidth:1,
     borderBottomColor:'#cccccc',
   }, 
+  Boton:{
+    backgroundColor:'white',
+    height:35,
+    borderColor:'maroon',
+    borderWidth:1
+},
   
 });
