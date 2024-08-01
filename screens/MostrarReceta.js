@@ -66,6 +66,7 @@ export default function MostrarReceta(props) {
   const Separator = () => <View style={styles.separator} />;
 
   return (
+    <ScrollView> 
     <View>
       <Text style={styles.titulo} >DETALLE DE LA RECETA</Text>
       
@@ -87,8 +88,8 @@ export default function MostrarReceta(props) {
           <Button title='Añadir a Favoritos' onPress={saveReceta}/>
         </View>
 
-
     </View>
+    </ScrollView>
   );
 }
 

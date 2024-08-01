@@ -40,6 +40,7 @@ export default function MostrarFavorito(props) {
   const Separator = () => <View style={styles.separator} />;
 
   return (
+    <ScrollView>
     <View>
       <Text style={styles.titulo} >DETALLE DE LA RECETA</Text>
       
@@ -59,6 +60,7 @@ export default function MostrarFavorito(props) {
         </TouchableOpacity>
 
     </View>
+    </ScrollView>
   );
 }
 

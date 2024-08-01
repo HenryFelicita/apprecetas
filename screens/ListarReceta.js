@@ -105,7 +105,7 @@ export default function ListarReceta(props) {
   },
   scrollView: {
     backgroundColor: 'maroon',
-    marginHorizontal: 0,
+    marginHorizontal: 2,
   },
   
 })
